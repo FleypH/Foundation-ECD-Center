@@ -915,4 +915,418 @@ header {
   }
 }
 
+.valuesMissionContainer {
+  height: 100vh;
+  width: 80.9rem;
+  border-radius: 20px;
+}
+
+.coreValues {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.corevaluesHeader h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0f0339;
+}
+
+.mottoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.coreValuesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mottoHeader h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4c0135;
+  text-transform: capitalize;
+}
+
+.mottoHeader h1::first-letter {
+  text-transform: capitalize;
+}
+
+.corevaluesHeader h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0f0339;
+  text-transform: capitalize;
+}
+
+.corevaluesHeader h1::first-letter::fifth-letter {
+  text-transform: capitalize;
+}
+
+.motto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.missionStateVision {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.mottoCoreValues {
+  padding-top: 20px;
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.empathy,
+.honesty,
+.respect,
+.excellence,
+.community {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-family: "Outfit", sans-serif;
+  color: #0f0339;
+  font-weight: 400;
+  background-color: transparent;
+  border-radius: 40px;
+  height: 40px;
+  width: 130px;
+
+  border: 2px solid #0f0339;
+}
+
+.develop,
+.learn,
+.see {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-family: "Outfit", sans-serif;
+  color: #4c0135;
+  font-weight: 400;
+  background-color: transparent;
+  border-radius: 40px;
+  height: 40px;
+  width: 130px;
+  border: 2px solid #4c0135;
+}
+
+.vision {
+  background-color: #4c0135;
+  border-radius: 20px;
+  width: 500px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding-bottom: 60px;
+}
+
+.missionstatement {
+  background-color: #4c0135;
+  border-radius: 20px;
+  width: 700px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.vision {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: 200;
+  color: #ffffff;
+  padding-left: 20px;
+  width: 400px;
+}
+
+.missionstatement p {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: 200;
+  color: #ffffff;
+  padding-left: 20px;
+  padding-top: 0px;
+  gap: 10px;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 670px;
+}
+
+.visionContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 400px;
+  background-color: #c6c4cc;
+  border: 5px solid #0f0339;
+}
+
+.vision {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+
+.missionstatement,
+.missionicon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.vision h1 {
+  padding-top: 20px;
+  font-size: 2rem;
+}
+
+.missionicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 400px;
+  background-color: #c6c4cc;
+  border: 5px solid #0f0339;
+  stroke-width: 10px;
+}
+
+.missionstatement h1,
+.vision h1 {
+  color: #0f0339;
+}
+
+.missionicon svg,
+.visionContent svg {
+  color: #0f0339;
+}
+
+.teamMembers {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  background-image: url(Resources/teambackground.png);
+  height: 40rem;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+.teamMembers h1 {
+  color: #0f0339;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-family: "Outfit", sans-serif;
+  padding: 3%;
+}
+
+.members {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+.member1,
+.member2,
+.member3 {
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #4c0135;
+}
+
+.text {
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.name {
+  color: #0e023c;
+
+  font-size: 1.2rem;
+}
+
+.role {
+  color: white;
+  font-weight: 400;
+  font-size: 0.4rem;
+}
+
+.meet,
+.testimonyheader {
+  font-family: "Oxanium", sans-serif;
+  font-size: 2rem;
+  color: #0f0339;
+  padding-top: 40px;
+}
+
+.member2 img,
+.member1 img,
+.member3 img {
+  width: 250px;
+  height: 300px;
+}
+
+.tour {
+  padding: 7px 50px;
+}
+
+.tour {
+  display: flex;
+  left: 50%;
+  flex-wrap: wrap;
+  background-color: #0f0339;
+  color: #ffff;
+  align-items: center;
+  width: auto;
+}
+
+.tourButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1%;
+}
+
+.testimonyheader{
+  margin-bottom: 40px;
+}
+.testimessage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap:30px
+  
+}
+
+.message {
+  border: 2px solid #740752;
+  height: 15.5rem;
+  width: 18rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  
+  margin-top: 1px;
+  overflow: hidden;
+}
  
+.message p {
+  text-align: left;
+  margin-top: -50px;
+  margin-left: 10px;
+  opacity: 70%;
+  color: #0f0339;
+}
+
+.message svg {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 10px;
+  opacity: 100%;
+  color: #0f0339 !important;
+}
+
+.testimonials p {
+  padding-bottom: 0;
+  padding-top: 50px;
+}
+
+.qoutes {
+  font-family: "Outfit", sans-serif;
+  color: #740752;
+  font-size: 200px;
+  font-weight: 100;
+}
+.parents, .location{
+  text-align: center  !important;
+}
+
+.parents {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #740752 !important;
+  opacity: 100% !important;
+  margin-top: -40px !important;
+}
+
+.location {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #0e023c !important;
+  opacity: 100% !important;
+  margin-top: -50px !important;
+  font-family: "Inter", sans-serif;
+}
+
+.whoarewe,
+.valuesMissionContainer,
+.paragraphs {
+  max-width: 100%;
+  width: 100%;
+}
