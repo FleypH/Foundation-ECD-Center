@@ -309,4 +309,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial update
     updateActiveDot();
   }
+
+  const faqItems = document.querySelectorAll(".faq-item");
+    
+faqItems.forEach(item => {
+  const question = item.querySelector(".faq-question");
+
+  question.addEventListener("click", () => {
+    // toggle active class
+    item.classList.toggle("active");
+  });
 });
+});
+
+
