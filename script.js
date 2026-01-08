@@ -155,14 +155,20 @@ document.addEventListener("DOMContentLoaded", () => {
           ) {
             const restSpan = document.createElement("span");
             restSpan.textContent = "";
+            restSpan.style.color = "#ffffff";
             typingElement.insertBefore(restSpan, cursor);
           }
           const restSpan = headSpan.nextElementSibling;
+          if (restSpan && restSpan !== cursor) {
+            restSpan.style.color = "#ffffff";
+          }
           if (currentIndex < restText.length) {
             restSpan.textContent = restText.substring(0, currentIndex + 1);
             currentIndex++;
             setTimeout(typeChar, 80);
           } else {
+            // Add space after "built on"
+            restSpan.textContent = restText + " ";
             // Add line break
             const br = document.createElement("br");
             typingElement.insertBefore(br, cursor);
@@ -178,7 +184,11 @@ document.addEventListener("DOMContentLoaded", () => {
             explorationSpan = document.createElement("span");
             explorationSpan.className = "exploration";
             explorationSpan.textContent = "";
+            explorationSpan.style.color = "#ffffff";
             typingElement.insertBefore(explorationSpan, cursor);
+          }
+          if (explorationSpan) {
+            explorationSpan.style.color = "#ffffff";
           }
           if (currentIndex < explorationText.length) {
             explorationSpan.textContent = explorationText.substring(
@@ -311,15 +321,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const faqItems = document.querySelectorAll(".faq-item");
-    
-faqItems.forEach(item => {
-  const question = item.querySelector(".faq-question");
 
-  question.addEventListener("click", () => {
-    // toggle active class
-    item.classList.toggle("active");
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+      // toggle active class
+      item.classList.toggle("active");
+    });
   });
 });
-});
-
-
