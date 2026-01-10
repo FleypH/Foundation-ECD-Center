@@ -338,4 +338,30 @@ document.addEventListener("DOMContentLoaded", () => {
       item.classList.toggle('active');
     });
   });
+
+  // Get all tab buttons
+const tabButtons = document.querySelectorAll('.tab-button');
+
+// Add click event listener to each button
+tabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const tabId = this.getAttribute('data-tab');
+        
+        // Hide all content cards
+        document.querySelectorAll('.content-card').forEach(card => {
+            card.classList.remove('active');
+        });
+        
+        // Remove active class from all buttons
+        tabButtons.forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // Show selected content card
+        document.getElementById(tabId).classList.add('active');
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+    });
+});
 });
