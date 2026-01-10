@@ -615,8 +615,6 @@ hr {
   width: 100%;
   padding: 20px 20px;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  container-type: inline-size;
-  container-name: aboutsection;
 }
 
  
@@ -639,9 +637,9 @@ hr {
   content: '';
   position: absolute;
   bottom: -5px;
-  left: 10%;
+  left: 50%;
   transform: translateX(-30%);
-  width: 80px;
+  width: 60px;
   height: 10px;
   background: linear-gradient(90deg, #0f0339, #a0095f);
   border-radius: 20px;
@@ -957,6 +955,7 @@ hr {
   padding: 10px 40px;
   border-radius: 25px;
   color: white;
+  container-type: inline-size;
 }
 
 .statshead {
@@ -1140,12 +1139,12 @@ hr {
 }
 @media (max-width: 1024px) {
   .aboutSection {
-    height: 710vh;
+    height: auto;
   }
 }
 @media (max-width: 768px) {
   .aboutSection {
-    height: 750vh;
+    height: auto;
   }
 
   .valuesMissionContainer {
@@ -1215,12 +1214,20 @@ hr {
     height: auto;
   }
 }
-@aboutsection(max-width: 326px){
-  
-}
+
 @media (max-width: 480px) {
   .aboutSection {
-    height: 900vh;
+    height: auto;
+  }
+
+  .heading .pri {
+    font-size: 1.5rem;
+    color: #0f0339;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
   }
 
   .teamMembers h1 {
@@ -1270,14 +1277,14 @@ hr {
     padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 50px;
-    height: 50px;
-    width: 100px;
+    height: 0px;
+    width: 70px;
   }
 
   .statscontainer {
     height: auto;
-    width: inherit;
-    gap: 3px;
+    width: auto;
+    gap: 0px;
   }
 
   .stats{
@@ -1335,118 +1342,156 @@ hr {
   font-family: "Outfit", sans-serif;
   padding: 20px;
 }
+.programscontent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-.programscontent p {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  top: 60px;
+.programscontent > div:first-child {
+  text-align: center;
+  margin-bottom: 40px;
+  background: rgba(116, 7, 82, 0.08);
+  padding: 24px 32px;
+  border-radius: 16px;
+}
+
+.programscontent > div:first-child p {
   font-size: 1.25rem;
   color: #740752;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .programscards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 0;
+  margin-bottom: 40px;
 }
 
-.programscards {
-  background: white;
-  padding: 90px;
-  margin-bottom: 40px;
+.card {
+  background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(116, 7, 82, 0.15);
 }
 
 .card img {
+  width: 100%;
+  height: 200px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  width: 350px;
-  height: 180px;
-  
+  display: block;
 }
 
-.card{
-  background: #f8f9fa;
-  border-radius: 10px;
-  padding: 10px;
-  transition: transform 0.3s;
-}
-
-.card:hover{
-  transform: translateY(-10px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-}
-
-.card p {
-  font-size: 1rem;
-  color: #0f0339;
-  opacity: 80%;
-  top: -10px;
-  left: 12.8px;
-  text-align: left;
-  font-weight: 200;
+.card-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .card h1 {
-  font-size: 1rem;
-  font-family: "Inter", sans-serif;
-  color: #740752;
-  position: relative;
-  left: 12.8px;
-  bottom: 15px;
-  text-align: left;
+  font-size: 1.125rem;
   font-weight: 600;
+  color: #740752;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.card p {
+  font-size: 0.9375rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
 }
 
 .programsbuttons {
-  position: relative;
   display: flex;
-  top: 5px;
-  gap: 50px;
-  left: 12.8px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .programsbuttons button {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 20px;
+  flex: 1;
+  min-width: 120px;
+  padding: 10px 16px;
   border-radius: 25px;
   font-weight: 500;
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 0.875rem;
   cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
 }
 
 .classenroll {
   background-color: #0e023c;
-  border: none;
-  color: #fff;
-}
-
-.classenroll:hover,
-.tour:hover,
-.viewclass:hover {
-  background: #740752;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(155, 7, 143, 0.4);
-}
-
-.classenroll svg {
   color: #fff;
 }
 
 .viewclass {
   background-color: transparent;
   border: 2px solid #0e023c;
-  color: #0f0339;
+  color: #0e023c;
 }
 
+.classenroll:hover,
+.viewclass:hover {
+  background: #740752;
+  color: #fff;
+  border-color: #740752;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(116, 7, 82, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .programscontent > div:first-child p {
+    font-size: 1.125rem;
+    padding: 0 10px;
+  }
+
+  .programscards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .programsbuttons {
+    flex-direction: column;
+  }
+
+  .programsbuttons button {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .programscards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .programscards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .whyuscards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1626,37 +1671,9 @@ hr {
   padding: 60px 20px;
 }
 
-.enrollmentHeading {
+.heading {
   text-align: center;
   margin-bottom: 50px;
-}
-
-.heading1 {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.heading1 .pri {
-  font-size: 3.5rem;
-  color: #740752;
-  font-weight: 400;
-  letter-spacing: 3px;
-  position: relative;
-  z-index: 2;
-}
-
-
-.prognumber2 h1 {
-  font-size: 1.8rem;
-  color: #740752;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.prognumber1 h1 {
-  font-size: 1.1rem;
-  color: #666;
-  font-weight: 400;
 }
 
 .regForm {
@@ -1668,7 +1685,7 @@ hr {
 }
 
 form label {
-  display: inline-block;
+  display: block;
   font-weight: 600;
   color: #333;
   margin-bottom: 8px;
@@ -1702,41 +1719,20 @@ form textarea {
   resize: vertical;
 }
 
-.enrollprog,
-.rankfamily,
-.health,
-.diet,
-.guardianAddress,
-.kinAddress {
+.form-group {
   margin-bottom: 25px;
 }
 
-.names,
-.dob,
-.gender,
-.guardian,
-.kin {
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   margin-bottom: 25px;
 }
 
-.fistname_surname,
-.labelcontainer,
-.gender-religion,
-.guardlabel,
-.kinlabel {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 8px;
-}
-
-.inputName_surname,
-.inputcontainer,
-.religion,
-.phone {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+.form-field {
+  display: flex;
+  flex-direction: column;
 }
 
 select {
@@ -1768,59 +1764,40 @@ select {
 
 .clear {
   background: white;
-  color: #740752;
-  border: 2px solid #740752;
+  color: #0f0339;
+  border: 2px solid #0f0339;
 }
 
 .clear:hover {
-  background: #740752;
+  background: #0f0339;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(116, 7, 82, 0.3);
+  box-shadow: 0 5px 15px rgba(15, 3, 57, 0.3);
 }
 
 .submit {
-  background: linear-gradient(135deg, #740752, #a0095f);
+  background: #0f0339;
   color: white;
 }
 
 .submit:hover {
+  background: #1a0550;
   transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(116, 7, 82, 0.4);
+  box-shadow: 0 5px 20px rgba(15, 3, 57, 0.4);
 }
 
 @media (max-width: 768px) {
-  .heading1 .pri {
+  .heading .pri {
     font-size: 2.5rem;
-  }
-
-  .heading1 .sec {
-    font-size: 3rem;
-  }
-
-  .prognumber2 h1 {
-    font-size: 1.3rem;
-  }
-
-  .prognumber1 h1 {
-    font-size: 0.95rem;
   }
 
   .regForm {
     padding: 30px 20px;
   }
 
-  .fistname_surname,
-  .labelcontainer,
-  .gender-religion,
-  .guardlabel,
-  .kinlabel,
-  .inputName_surname,
-  .inputcontainer,
-  .religion,
-  .phone {
+  .form-row {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 20px;
   }
 
   .formbuttons {
@@ -2091,6 +2068,196 @@ select {
     grid-template-columns: 1fr;
   }
 }
+/* --------faqs--------------------- */
+.faqs {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.container {
+  background: white;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  font-size: 1.5rem;
+  color: #0f0339;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #740752;
+}
+
+.faq-question {
+  width: 100%;
+  background: #f8f9fa;
+  border: none;
+  padding: 20px 25px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f0339;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.faq-question:hover {
+  background: #740752;
+  color: white;
+}
+
+.faq-question span {
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question span {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 25px;
+  background: white;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  color: #555;
+  line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 20px 25px;
+}
+
+/* Form Section */
+.container > h2:nth-of-type(2) {
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 2px solid #e0e0e0;
+}
+
+form {
+  margin-top: 30px;
+}
+
+.form-group1,
+.form-group2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group3 {
+  margin-bottom: 25px;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s;
+  background: #f8f9fa;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #740752;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(116, 7, 82, 0.1);
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #0f0339;
+  color: white;
+  display: block;
+  margin: 0 auto;
+}
+
+.submit-btn:hover {
+  background: #1a0550;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(15, 3, 57, 0.4);
+}
+
+@media (max-width: 768px) {
+  .heading .pri {
+    font-size: 2.5rem;
+  }
+
+  .container {
+    padding: 30px 20px;
+  }
+
+  .container h2 {
+    font-size: 1.25rem;
+  }
+
+  .faq-question {
+    padding: 15px 20px;
+    font-size: 0.95rem;
+  }
+
+  .form-group1,
+  .form-group2 {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
 
 /* ===== Header Section ===== */
 .header {
@@ -2132,11 +2299,14 @@ select {
 }
 
 /* ===== Main Container ===== */
-.contact-wrapper {
-  max-width: 1100px;
-  margin: 100px auto 60px;
-  padding: 0 20px;
+.contact-section
+{
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 40px 40px;
   height: auto;
+}
+.contact-wrapper {
+
 }
 .contactHeading {
   margin-top: 50px !important;
