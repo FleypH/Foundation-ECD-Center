@@ -321,47 +321,47 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // FAQ Accordion functionality
-  const faqItems = document.querySelectorAll('.faq-item');
-    
-  faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    
-    question.addEventListener('click', () => {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
       // Close other items
-      faqItems.forEach(otherItem => {
+      faqItems.forEach((otherItem) => {
         if (otherItem !== item) {
-          otherItem.classList.remove('active');
+          otherItem.classList.remove("active");
         }
       });
-      
+
       // Toggle current item
-      item.classList.toggle('active');
+      item.classList.toggle("active");
     });
   });
 
   // Get all tab buttons
-const tabButtons = document.querySelectorAll('.tab-button');
+  const tabButtons = document.querySelectorAll(".tab-button");
 
-// Add click event listener to each button
-tabButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        const tabId = this.getAttribute('data-tab');
-        
-        // Hide all content cards
-        document.querySelectorAll('.content-card').forEach(card => {
-            card.classList.remove('active');
-        });
-        
-        // Remove active class from all buttons
-        tabButtons.forEach(btn => {
-            btn.classList.remove('active');
-        });
-        
-        // Show selected content card
-        document.getElementById(tabId).classList.add('active');
-        
-        // Add active class to clicked button
-        this.classList.add('active');
+  // Add click event listener to each button
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const tabId = this.getAttribute("data-tab");
+
+      // Hide all content cards
+      document.querySelectorAll(".content-card").forEach((card) => {
+        card.classList.remove("active");
+      });
+
+      // Remove active class from all buttons
+      tabButtons.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      // Show selected content card
+      document.getElementById(tabId).classList.add("active");
+
+      // Add active class to clicked button
+      this.classList.add("active");
     });
-});
+  });
 });
