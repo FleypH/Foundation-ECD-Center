@@ -2,7 +2,53 @@ document.addEventListener("DOMContentLoaded", () => {
   const ribbon = document.getElementById("ribbon");
   const navItems = document.querySelectorAll(".nav-item");
   const navList = document.getElementById("nav-list");
+  const hamburger = document.getElementById("hamburger");
 
+  // Toggle menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navList.classList.toggle("active");
+
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = navList.classList.contains("active")
+      ? "hidden"
+      : "";
+  });
+
+  // Close menu when clicking on nav items
+  navItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navList.classList.remove("active");
+      document.body.style.overflow = "";
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!hamburger.contains(e.target) && !navList.contains(e.target)) {
+      hamburger.classList.remove("active");
+      navList.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+
+  // Update active nav item based on scroll position
+  window.addEventListener("scroll", () => {
+    const sections = ["home", "about", "programs", "enroll", "gallery", "faqs"];
+
+    sections.forEach((section) => {
+      const element = document.getElementById(section);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          navItems.forEach((item) => item.classList.remove("active"));
+          const activeLink = document.querySelector(`a[href="#${section}"]`);
+          if (activeLink) activeLink.classList.add("active");
+        }
+      }
+    });
+  });
   function moveAndResizeRibbon(target) {
     const listRect = navList.getBoundingClientRect();
     const itemRect = target.getBoundingClientRect();
